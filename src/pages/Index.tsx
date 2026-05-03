@@ -104,6 +104,15 @@ const Index = () => {
               <p className="mt-4 text-xs text-muted-foreground">
                 Mon–Sat · 9 AM – 7 PM · Owner: Kanhai Kumar
               </p>
+              <div className="mt-10 overflow-hidden rounded-3xl border border-border shadow-2xl">
+                <img
+                  src={heroImg}
+                  alt="Students learning computers at BNS Computer Institute, Desari"
+                  width={1280}
+                  height={896}
+                  className="h-auto w-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </section>
