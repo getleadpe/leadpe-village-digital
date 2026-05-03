@@ -1,4 +1,7 @@
 import { useState } from "react";
+import logo from "@/assets/logo.png";
+import heroImg from "@/assets/hero-classroom.jpg";
+import aboutImg from "@/assets/about-student.jpg";
 import {
   Phone,
   MessageCircle,
@@ -49,10 +52,12 @@ const Index = () => {
       {/* Header */}
       <header className="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur">
         <div className="container flex h-16 items-center justify-between">
-          <a href="#top" className="font-bold text-lg sm:text-xl tracking-tight">
-            <span className="text-brand">BNS</span>{" "}
-            <span className="hidden sm:inline">COMPUTER INSTITUTE</span>
-            <span className="sm:hidden">COMPUTER</span>
+          <a href="#top" className="flex items-center gap-2 font-bold tracking-tight">
+            <img src={logo} alt="BNS Computer Institute logo" width={40} height={40} className="h-10 w-10" />
+            <span className="flex flex-col leading-tight">
+              <span className="text-base sm:text-lg text-foreground">BNS</span>
+              <span className="text-[10px] sm:text-xs font-medium uppercase tracking-wider text-muted-foreground">Computer Institute</span>
+            </span>
           </a>
           <a
             href={PHONE}
