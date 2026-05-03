@@ -1,15 +1,18 @@
 import { useState } from "react";
 import logo from "@/assets/logo.png";
-import heroImg from "@/assets/hero-classroom.jpg";
-import aboutImg from "@/assets/about-student.jpg";
+import heroImg from "@/assets/classroom-1.jpg";
+import lab1 from "@/assets/lab-1.jpg";
+import lab2 from "@/assets/lab-2.jpg";
+import founderImg from "@/assets/founder.jpg";
+import cert1 from "@/assets/certificate-1.jpg";
+import cert2 from "@/assets/certificate-2.jpg";
 import {
   Phone,
   MessageCircle,
   Monitor,
   FileSpreadsheet,
   Calculator,
-  Keyboard,
-  Globe,
+  Palette,
   GraduationCap,
   MapPin,
   Clock,
@@ -17,37 +20,27 @@ import {
   Award,
   IndianRupee,
   Users,
+  Receipt,
+  BookOpen,
 } from "lucide-react";
 
 const WHATSAPP = "https://wa.me/917050449861";
 const PHONE = "tel:+917050449861";
 
 const courses = [
-  {
-    icon: Monitor,
-    title: "Basic Computer",
-    desc: "Computer fundamentals, Windows, file management & internet basics.",
-  },
-  { icon: FileSpreadsheet, title: "MS Office", desc: "Word, Excel, PowerPoint — practical skills for office & study." },
-  { icon: Calculator, title: "Tally", desc: "Tally Prime accounting, GST, inventory & billing for jobs/business." },
-  {
-    icon: Keyboard,
-    title: "Typing (Hindi/English)",
-    desc: "Speed & accuracy training for govt exams and office work.",
-  },
-  { icon: Globe, title: "Internet & Email", desc: "Browsing, email, online forms, UPI, e-governance & safety." },
-  {
-    icon: GraduationCap,
-    title: "Govt-Job Computer Prep",
-    desc: "CCC, RRB, SSC, Bank & Bihar govt computer exam preparation.",
-  },
+  { icon: GraduationCap, title: "ADCA", duration: "12 Months", desc: "Advanced Diploma in Computer Application — complete professional course." },
+  { icon: Monitor, title: "DCA", duration: "6 Months", desc: "Diploma in Computer Application — fundamentals, MS Office, Internet & more." },
+  { icon: Calculator, title: "Tally Prime", duration: "3 Months", desc: "Accounting, GST, inventory & billing — job-ready Tally training." },
+  { icon: Palette, title: "DTP", duration: "3 Months", desc: "PageMaker, CorelDRAW, Photoshop — design & desktop publishing." },
+  { icon: BookOpen, title: "CCA", duration: "3 Months", desc: "Certificate in Computer Application — basics for students & shopkeepers." },
+  { icon: Receipt, title: "GST + Accounting", duration: "2 Months", desc: "Practical GST filing, returns & business accounting." },
 ];
 
 const features = [
-  { icon: MapPin, title: "Local in Desari", desc: "Right here in Desari, Bihar — easy to reach for every student." },
-  { icon: IndianRupee, title: "Affordable Fees", desc: "Pocket-friendly fees with flexible monthly payment options." },
+  { icon: MapPin, title: "Local in Desari", desc: "Near Desari Hat, opposite Ice Cream Factory, Chandeswar Complex (Vaishali)." },
+  { icon: IndianRupee, title: "Affordable Fees", desc: "Starting from just ₹500/month — flexible monthly payments." },
   { icon: Award, title: "Certified Courses", desc: "Recognised certificates after course completion & exam." },
-  { icon: Users, title: "Placement Guidance", desc: "Resume help, interview tips & job referrals for our students." },
+  { icon: Users, title: "Projector-based Theory", desc: "We use projector for theory classes — clear visual learning." },
 ];
 
 const Index = () => {
@@ -88,14 +81,14 @@ const Index = () => {
           <div className="container py-14 sm:py-20">
             <div className="mx-auto max-w-3xl text-center">
               <span className="inline-flex items-center gap-2 rounded-full border border-brand/30 bg-white px-3 py-1 text-xs font-semibold text-brand">
-                <CheckCircle2 className="h-3.5 w-3.5" /> Trusted in Desari, Bihar
+                <CheckCircle2 className="h-3.5 w-3.5" /> Trusted in Desari, Vaishali (Bihar)
               </span>
               <h1 className="mt-5 text-3xl font-extrabold leading-tight sm:text-5xl">
                 BNS COMPUTER INSTITUTE — Best Computer Coaching in <span className="text-brand">Desari</span>
               </h1>
               <p className="mt-4 text-base text-muted-foreground sm:text-lg">
-                Learn Basic Computer, Tally, MS Office, Typing, Internet & Govt-job computer courses from experienced
-                teachers — affordable fees, real practice, certified training.
+                ADCA, DCA, Tally, DTP, CCA & GST — practical computer courses with experienced teachers,
+                affordable monthly fees and real hands-on training.
               </p>
               <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <a
@@ -117,9 +110,7 @@ const Index = () => {
               <div className="mt-10 overflow-hidden rounded-3xl border border-border shadow-2xl">
                 <img
                   src={heroImg}
-                  alt="Students learning computers at BNS Computer Institute, Desari"
-                  width={1280}
-                  height={896}
+                  alt="Students attending class at BNS Computer Institute, Desari"
                   className="h-auto w-full object-cover"
                 />
               </div>
@@ -133,7 +124,7 @@ const Index = () => {
             <div className="mx-auto mb-10 max-w-2xl text-center">
               <h2 className="text-2xl font-bold sm:text-3xl">Our Courses</h2>
               <p className="mt-2 text-muted-foreground">
-                Practical computer courses designed for students, job seekers and shopkeepers in Desari.
+                Industry-relevant computer courses for students, job seekers & shopkeepers in Desari.
               </p>
             </div>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -145,10 +136,33 @@ const Index = () => {
                   <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-soft text-brand">
                     <c.icon className="h-6 w-6" />
                   </div>
-                  <h3 className="text-lg font-semibold">{c.title}</h3>
+                  <div className="flex items-center justify-between gap-2">
+                    <h3 className="text-lg font-semibold">{c.title}</h3>
+                    <span className="rounded-full bg-brand-soft px-2.5 py-0.5 text-[11px] font-semibold text-brand">
+                      {c.duration}
+                    </span>
+                  </div>
                   <p className="mt-2 text-sm text-muted-foreground">{c.desc}</p>
                 </div>
               ))}
+            </div>
+
+            {/* Pricing */}
+            <div className="mx-auto mt-10 grid max-w-3xl gap-4 sm:grid-cols-2">
+              <div className="rounded-2xl border-2 border-brand bg-brand-soft p-6 text-center">
+                <p className="text-xs font-semibold uppercase tracking-wider text-brand">Course Enrollment</p>
+                <p className="mt-2 text-sm text-muted-foreground">Registration fee + Monthly fee</p>
+                <p className="mt-3 text-3xl font-extrabold text-foreground">
+                  From <span className="text-brand">₹725</span>
+                </p>
+              </div>
+              <div className="rounded-2xl border border-border bg-card p-6 text-center">
+                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Tutoring</p>
+                <p className="mt-2 text-sm text-muted-foreground">Monthly fee</p>
+                <p className="mt-3 text-3xl font-extrabold text-foreground">
+                  From <span className="text-brand">₹500</span>
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -156,43 +170,22 @@ const Index = () => {
         {/* About */}
         <section id="about" className="bg-brand-soft py-14 sm:py-20">
           <div className="container grid gap-10 lg:grid-cols-2 lg:items-center">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-xl">
-              <img
-                src={aboutImg}
-                alt="Confident BNS Computer Institute student"
-                width={1024}
-                height={768}
-                loading="lazy"
-                className="h-full w-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/85 via-brand-dark/30 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-6 text-brand-foreground">
-                <p className="text-xs uppercase tracking-widest opacity-90">Serving Desari</p>
-                <p className="mt-1 text-4xl font-extrabold">100% Practical</p>
-                <div className="mt-4 grid grid-cols-2 gap-3 text-sm">
-                  <div className="rounded-xl bg-white/15 p-3 backdrop-blur">
-                    <p className="text-2xl font-bold">6+</p>
-                    <p className="opacity-90">Courses</p>
-                  </div>
-                  <div className="rounded-xl bg-white/15 p-3 backdrop-blur">
-                    <p className="text-2xl font-bold">Mon–Sat</p>
-                    <p className="opacity-90">9 AM – 7 PM</p>
-                  </div>
-                </div>
-              </div>
+            <div className="grid grid-cols-2 gap-3">
+              <img src={founderImg} alt="Kanhai Kumar — Founder, BNS Computer Institute" loading="lazy" className="col-span-2 h-72 w-full rounded-2xl object-cover shadow-lg" />
+              <img src={lab1} alt="BNS computer lab in Desari" loading="lazy" className="h-40 w-full rounded-2xl object-cover shadow-md" />
+              <img src={lab2} alt="Practical computer training at BNS, Desari" loading="lazy" className="h-40 w-full rounded-2xl object-cover shadow-md" />
             </div>
             <div>
               <h2 className="text-2xl font-bold sm:text-3xl">About BNS Computer Institute</h2>
               <p className="mt-4 text-muted-foreground">
                 BNS COMPUTER INSTITUTE is a trusted computer coaching institute serving Desari and nearby areas of
-                Bihar. Founded by <strong className="text-foreground">Kanhai Kumar</strong>, our mission is simple —
+                Vaishali, Bihar. Founded by <strong className="text-foreground">Kanhai Kumar</strong>, our mission is to
                 give every local student strong, practical computer skills at an affordable fee.
               </p>
               <p className="mt-3 text-muted-foreground">
-                We teach Basic Computer, Tally, MS Office, Hindi & English typing, Internet, Email and complete computer
-                preparation for government jobs. With small batches, friendly teachers and real practice on computers,
-                we have helped many students from Desari clear exams, find jobs and run their own business work
-                confidently.
+                We teach ADCA, DCA, Tally Prime, DTP, CCA, GST and complete computer preparation for government jobs.
+                With small batches, friendly teachers, projector-based theory and real hands-on practice, we have helped
+                many students from Desari clear exams, find jobs and run their business work confidently.
               </p>
               <a
                 href={WHATSAPP}
@@ -211,7 +204,7 @@ const Index = () => {
           <div className="container">
             <div className="mx-auto mb-10 max-w-2xl text-center">
               <h2 className="text-2xl font-bold sm:text-3xl">Why Choose Us</h2>
-              <p className="mt-2 text-muted-foreground">Local · Affordable · Certified · Placement guidance.</p>
+              <p className="mt-2 text-muted-foreground">Local · Affordable · Certified · Practical Training.</p>
             </div>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {features.map((f) => (
@@ -226,6 +219,20 @@ const Index = () => {
                   <p className="mt-2 text-sm text-muted-foreground">{f.desc}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Student Achievements */}
+        <section className="bg-brand-soft py-14 sm:py-20">
+          <div className="container">
+            <div className="mx-auto mb-10 max-w-2xl text-center">
+              <h2 className="text-2xl font-bold sm:text-3xl">Student Achievements</h2>
+              <p className="mt-2 text-muted-foreground">Proud moments of our certified students from Desari.</p>
+            </div>
+            <div className="mx-auto grid max-w-4xl gap-4 sm:grid-cols-2">
+              <img src={cert1} alt="BNS student receiving certificate" loading="lazy" className="h-72 w-full rounded-2xl object-cover shadow-lg" />
+              <img src={cert2} alt="BNS Computer Institute certificate distribution" loading="lazy" className="h-72 w-full rounded-2xl object-cover shadow-lg" />
             </div>
           </div>
         </section>
@@ -264,7 +271,7 @@ const Index = () => {
                   <option value="">Select a course</option>
                   {courses.map((c) => (
                     <option key={c.title} value={c.title}>
-                      {c.title}
+                      {c.title} ({c.duration})
                     </option>
                   ))}
                 </select>
@@ -277,7 +284,7 @@ const Index = () => {
               </form>
 
               <a
-                href="https://wa.me/917050449861"
+                href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4 block text-center text-sm font-semibold text-brand hover:underline"
@@ -299,7 +306,7 @@ const Index = () => {
               <ul className="mt-6 space-y-4 text-sm">
                 <li className="flex gap-3">
                   <MapPin className="mt-0.5 h-5 w-5 flex-shrink-0 text-brand" />
-                  <span>BNS Computer Institute, Desari, Bihar, India</span>
+                  <span>Near Desari Hat, Opposite Ice Cream Factory, Chandeswar Complex, Desari (Vaishali), Bihar</span>
                 </li>
                 <li className="flex gap-3">
                   <Clock className="mt-0.5 h-5 w-5 flex-shrink-0 text-brand" />
@@ -307,9 +314,7 @@ const Index = () => {
                 </li>
                 <li className="flex gap-3">
                   <Phone className="mt-0.5 h-5 w-5 flex-shrink-0 text-brand" />
-                  <a href={PHONE} className="hover:underline">
-                    +91 70504 49861
-                  </a>
+                  <a href={PHONE} className="hover:underline">+91 70504 49861</a>
                 </li>
                 <li className="flex gap-3">
                   <MessageCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-brand" />
@@ -322,7 +327,7 @@ const Index = () => {
             <div className="overflow-hidden rounded-2xl border border-border shadow-md">
               <iframe
                 title="Map of Desari, Bihar"
-                src="https://www.google.com/maps?q=Desari,Bihar,India&output=embed"
+                src="https://www.google.com/maps?q=Desari,Vaishali,Bihar,India&output=embed"
                 width="100%"
                 height="320"
                 loading="lazy"
@@ -337,7 +342,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="border-t border-border bg-foreground py-8 text-background">
         <div className="container flex flex-col items-center gap-3 text-center text-sm">
-          <p className="font-semibold">BNS COMPUTER INSTITUTE · Desari, Bihar</p>
+          <p className="font-semibold">BNS COMPUTER INSTITUTE · Desari, Vaishali, Bihar</p>
           <p className="opacity-70">© {new Date().getFullYear()} All rights reserved.</p>
           <a
             href="https://leadpe.ONLINE"
