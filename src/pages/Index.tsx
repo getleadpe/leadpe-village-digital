@@ -23,12 +23,24 @@ const WHATSAPP = "https://wa.me/917050449861";
 const PHONE = "tel:+917050449861";
 
 const courses = [
-  { icon: Monitor, title: "Basic Computer", desc: "Computer fundamentals, Windows, file management & internet basics." },
+  {
+    icon: Monitor,
+    title: "Basic Computer",
+    desc: "Computer fundamentals, Windows, file management & internet basics.",
+  },
   { icon: FileSpreadsheet, title: "MS Office", desc: "Word, Excel, PowerPoint — practical skills for office & study." },
   { icon: Calculator, title: "Tally", desc: "Tally Prime accounting, GST, inventory & billing for jobs/business." },
-  { icon: Keyboard, title: "Typing (Hindi/English)", desc: "Speed & accuracy training for govt exams and office work." },
+  {
+    icon: Keyboard,
+    title: "Typing (Hindi/English)",
+    desc: "Speed & accuracy training for govt exams and office work.",
+  },
   { icon: Globe, title: "Internet & Email", desc: "Browsing, email, online forms, UPI, e-governance & safety." },
-  { icon: GraduationCap, title: "Govt-Job Computer Prep", desc: "CCC, RRB, SSC, Bank & Bihar govt computer exam preparation." },
+  {
+    icon: GraduationCap,
+    title: "Govt-Job Computer Prep",
+    desc: "CCC, RRB, SSC, Bank & Bihar govt computer exam preparation.",
+  },
 ];
 
 const features = [
@@ -56,7 +68,9 @@ const Index = () => {
             <img src={logo} alt="BNS Computer Institute logo" width={40} height={40} className="h-10 w-10" />
             <span className="flex flex-col leading-tight">
               <span className="text-base sm:text-lg text-foreground">BNS</span>
-              <span className="text-[10px] sm:text-xs font-medium uppercase tracking-wider text-muted-foreground">Computer Institute</span>
+              <span className="text-[10px] sm:text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                Computer Institute
+              </span>
             </span>
           </a>
           <a
@@ -77,13 +91,11 @@ const Index = () => {
                 <CheckCircle2 className="h-3.5 w-3.5" /> Trusted in Desari, Bihar
               </span>
               <h1 className="mt-5 text-3xl font-extrabold leading-tight sm:text-5xl">
-                BNS COMPUTER INSTITUTE — Best Computer Coaching in{" "}
-                <span className="text-brand">Desari</span>
+                BNS COMPUTER INSTITUTE — Best Computer Coaching in <span className="text-brand">Desari</span>
               </h1>
               <p className="mt-4 text-base text-muted-foreground sm:text-lg">
-                Learn Basic Computer, Tally, MS Office, Typing, Internet & Govt-job
-                computer courses from experienced teachers — affordable fees, real
-                practice, certified training.
+                Learn Basic Computer, Tally, MS Office, Typing, Internet & Govt-job computer courses from experienced
+                teachers — affordable fees, real practice, certified training.
               </p>
               <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <a
@@ -101,9 +113,7 @@ const Index = () => {
                   <Phone className="h-5 w-5" /> Call Now
                 </a>
               </div>
-              <p className="mt-4 text-xs text-muted-foreground">
-                Mon–Sat · 9 AM – 7 PM · Owner: Kanhai Kumar
-              </p>
+              <p className="mt-4 text-xs text-muted-foreground">Mon–Sat · 9 AM – 7 PM · Owner: Kanhai Kumar</p>
               <div className="mt-10 overflow-hidden rounded-3xl border border-border shadow-2xl">
                 <img
                   src={heroImg}
@@ -123,8 +133,7 @@ const Index = () => {
             <div className="mx-auto mb-10 max-w-2xl text-center">
               <h2 className="text-2xl font-bold sm:text-3xl">Our Courses</h2>
               <p className="mt-2 text-muted-foreground">
-                Practical computer courses designed for students, job seekers and
-                shopkeepers in Desari.
+                Practical computer courses designed for students, job seekers and shopkeepers in Desari.
               </p>
             </div>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -175,18 +184,15 @@ const Index = () => {
             <div>
               <h2 className="text-2xl font-bold sm:text-3xl">About BNS Computer Institute</h2>
               <p className="mt-4 text-muted-foreground">
-                BNS COMPUTER INSTITUTE is a trusted computer coaching institute
-                serving Desari and nearby areas of Bihar. Founded by{" "}
-                <strong className="text-foreground">Kanhai Kumar</strong>, our
-                mission is simple — give every local student strong, practical
-                computer skills at an affordable fee.
+                BNS COMPUTER INSTITUTE is a trusted computer coaching institute serving Desari and nearby areas of
+                Bihar. Founded by <strong className="text-foreground">Kanhai Kumar</strong>, our mission is simple —
+                give every local student strong, practical computer skills at an affordable fee.
               </p>
               <p className="mt-3 text-muted-foreground">
-                We teach Basic Computer, Tally, MS Office, Hindi & English typing,
-                Internet, Email and complete computer preparation for government
-                jobs. With small batches, friendly teachers and real practice on
-                computers, we have helped many students from Desari clear exams,
-                find jobs and run their own business work confidently.
+                We teach Basic Computer, Tally, MS Office, Hindi & English typing, Internet, Email and complete computer
+                preparation for government jobs. With small batches, friendly teachers and real practice on computers,
+                we have helped many students from Desari clear exams, find jobs and run their own business work
+                confidently.
               </p>
               <a
                 href={WHATSAPP}
@@ -205,9 +211,7 @@ const Index = () => {
           <div className="container">
             <div className="mx-auto mb-10 max-w-2xl text-center">
               <h2 className="text-2xl font-bold sm:text-3xl">Why Choose Us</h2>
-              <p className="mt-2 text-muted-foreground">
-                Local · Affordable · Certified · Placement guidance.
-              </p>
+              <p className="mt-2 text-muted-foreground">Local · Affordable · Certified · Placement guidance.</p>
             </div>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {features.map((f) => (
@@ -232,9 +236,7 @@ const Index = () => {
             <div className="mx-auto max-w-xl rounded-3xl border border-border bg-card p-6 shadow-xl sm:p-8">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand">LEADPE</p>
               <h2 className="mt-2 text-2xl font-bold sm:text-3xl">Get In Touch</h2>
-              <p className="mt-1 text-sm text-muted-foreground">
-                One tap. We respond instantly.
-              </p>
+              <p className="mt-1 text-sm text-muted-foreground">One tap. We respond instantly.</p>
 
               <form onSubmit={handleSubmit} className="mt-6 space-y-3">
                 <input
@@ -283,9 +285,7 @@ const Index = () => {
                 WhatsApp Now →
               </a>
 
-              <p className="mt-6 text-center text-[11px] text-muted-foreground">
-                Website Bhi. Customer Bhi. — LeadPe
-              </p>
+              <p className="mt-6 text-center text-[11px] text-muted-foreground">Website Bhi. Customer Bhi. — LeadPe</p>
             </div>
           </div>
         </section>
@@ -295,9 +295,7 @@ const Index = () => {
           <div className="container grid gap-8 lg:grid-cols-2">
             <div>
               <h2 className="text-2xl font-bold sm:text-3xl">Visit Us</h2>
-              <p className="mt-3 text-muted-foreground">
-                Drop in for a free demo class or counselling session.
-              </p>
+              <p className="mt-3 text-muted-foreground">Drop in for a free demo class or counselling session.</p>
               <ul className="mt-6 space-y-4 text-sm">
                 <li className="flex gap-3">
                   <MapPin className="mt-0.5 h-5 w-5 flex-shrink-0 text-brand" />
@@ -309,7 +307,9 @@ const Index = () => {
                 </li>
                 <li className="flex gap-3">
                   <Phone className="mt-0.5 h-5 w-5 flex-shrink-0 text-brand" />
-                  <a href={PHONE} className="hover:underline">+91 70504 49861</a>
+                  <a href={PHONE} className="hover:underline">
+                    +91 70504 49861
+                  </a>
                 </li>
                 <li className="flex gap-3">
                   <MessageCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-brand" />
@@ -340,7 +340,7 @@ const Index = () => {
           <p className="font-semibold">BNS COMPUTER INSTITUTE · Desari, Bihar</p>
           <p className="opacity-70">© {new Date().getFullYear()} All rights reserved.</p>
           <a
-            href="https://leadpe.tech"
+            href="https://leadpe.ONLINE"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-2 inline-flex items-center gap-2 rounded-full bg-brand px-4 py-2 text-xs font-semibold text-brand-foreground hover:bg-brand-dark"
