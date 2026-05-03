@@ -1,4 +1,7 @@
 import { useState } from "react";
+import logo from "@/assets/logo.png";
+import heroImg from "@/assets/hero-classroom.jpg";
+import aboutImg from "@/assets/about-student.jpg";
 import {
   Phone,
   MessageCircle,
@@ -49,10 +52,12 @@ const Index = () => {
       {/* Header */}
       <header className="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur">
         <div className="container flex h-16 items-center justify-between">
-          <a href="#top" className="font-bold text-lg sm:text-xl tracking-tight">
-            <span className="text-brand">BNS</span>{" "}
-            <span className="hidden sm:inline">COMPUTER INSTITUTE</span>
-            <span className="sm:hidden">COMPUTER</span>
+          <a href="#top" className="flex items-center gap-2 font-bold tracking-tight">
+            <img src={logo} alt="BNS Computer Institute logo" width={40} height={40} className="h-10 w-10" />
+            <span className="flex flex-col leading-tight">
+              <span className="text-base sm:text-lg text-foreground">BNS</span>
+              <span className="text-[10px] sm:text-xs font-medium uppercase tracking-wider text-muted-foreground">Computer Institute</span>
+            </span>
           </a>
           <a
             href={PHONE}
@@ -99,6 +104,15 @@ const Index = () => {
               <p className="mt-4 text-xs text-muted-foreground">
                 Mon–Sat · 9 AM – 7 PM · Owner: Kanhai Kumar
               </p>
+              <div className="mt-10 overflow-hidden rounded-3xl border border-border shadow-2xl">
+                <img
+                  src={heroImg}
+                  alt="Students learning computers at BNS Computer Institute, Desari"
+                  width={1280}
+                  height={896}
+                  className="h-auto w-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -133,21 +147,27 @@ const Index = () => {
         {/* About */}
         <section id="about" className="bg-brand-soft py-14 sm:py-20">
           <div className="container grid gap-10 lg:grid-cols-2 lg:items-center">
-            <div className="aspect-[4/3] rounded-3xl bg-gradient-to-br from-brand to-brand-dark p-8 text-brand-foreground shadow-xl">
-              <div className="flex h-full flex-col justify-between">
-                <div>
-                  <p className="text-sm uppercase tracking-widest opacity-80">Since serving Desari</p>
-                  <p className="mt-2 text-5xl font-extrabold">100%</p>
-                  <p className="mt-1 text-lg opacity-90">Practical, hands-on training</p>
-                </div>
-                <div className="grid grid-cols-2 gap-4 text-sm">
-                  <div>
-                    <p className="text-3xl font-bold">6+</p>
-                    <p className="opacity-80">Courses</p>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-xl">
+              <img
+                src={aboutImg}
+                alt="Confident BNS Computer Institute student"
+                width={1024}
+                height={768}
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/85 via-brand-dark/30 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 p-6 text-brand-foreground">
+                <p className="text-xs uppercase tracking-widest opacity-90">Serving Desari</p>
+                <p className="mt-1 text-4xl font-extrabold">100% Practical</p>
+                <div className="mt-4 grid grid-cols-2 gap-3 text-sm">
+                  <div className="rounded-xl bg-white/15 p-3 backdrop-blur">
+                    <p className="text-2xl font-bold">6+</p>
+                    <p className="opacity-90">Courses</p>
                   </div>
-                  <div>
-                    <p className="text-3xl font-bold">Mon–Sat</p>
-                    <p className="opacity-80">9 AM – 7 PM</p>
+                  <div className="rounded-xl bg-white/15 p-3 backdrop-blur">
+                    <p className="text-2xl font-bold">Mon–Sat</p>
+                    <p className="opacity-90">9 AM – 7 PM</p>
                   </div>
                 </div>
               </div>
